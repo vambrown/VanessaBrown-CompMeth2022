@@ -1,5 +1,7 @@
+"""Curve plotting from Exercise 3.2 for Homework 1."""
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 # the deltoid curve
 theta1 = np.linspace(0, 2*np.pi, 2000)
@@ -19,15 +21,15 @@ x3 = r3*np.cos(theta3)
 y3 = r3*np.sin(theta3)
 
 # plots
-fig, axes = plt.subplots(nrows = 1, ncols = 3, figsize = (7,3), dpi = 300)
-plt.subplots_adjust(wspace = 0.5)
-axes[0].plot(x1, y1, color = '#ffd343')
+fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(7, 3), dpi=300)
+plt.subplots_adjust(wspace=0.5)
+axes[0].plot(x1, y1, color='#ffd343')
 axes[0].set_box_aspect(1)
 axes[0].set_title('Deltoid Curve')
-axes[1].plot(x2, y2, color = '#9b59d0')
+axes[1].plot(x2, y2, color='#9b59d0')
 axes[1].set_box_aspect(1)
 axes[1].set_title('Galilean Spiral')
-axes[2].plot(x3, y3, color = 'k', linewidth = 0.7)
+axes[2].plot(x3, y3, color='k', linewidth=0.7)
 axes[2].set_box_aspect(1)
 axes[2].set_title('Fey\'s Function')
 fig.suptitle('Exercise 3.2: Curve Plotting', fontsize=16)
